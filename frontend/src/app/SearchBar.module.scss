@@ -1,0 +1,21 @@
+.searchContainerInputs {
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 20rem;
+    height: 2.2rem;
+    border: 2px solid gray;
+    padding: 0 .4rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  button {
+    margin-right: 1rem;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
