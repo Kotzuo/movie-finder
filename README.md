@@ -31,10 +31,6 @@ In order to request omdbapi is necessary to give an `apiKey`, just populate it o
 
 ### Movie Repository Caching
 
-### Env
-
-`.env.local` file here is optional, if it does not exists it will use the default values, the only variable currently used is `NEXT_PUBLIC_MOVIE_API_URL` to indicate the url for the backend
-
 #### Structure
 
 if you opened the `/backend/src/movie/movie.repository.ts` you will notice that is not the usual day to day simplest repository, instead you will find 3 repositories, the `OmdbApiMovieRepository`, `CachedMovieRepository` and `AggregatedMovieRepository`, all of then implements the abstract class `MovieRepository`, the `AggregatedMovieRepository` is the one that is injected with the `MovieRepository` token injection, this repository has 2 dependecies that is `OmdbApiMovieRepository`, `CachedMovieRepository`.
@@ -46,6 +42,10 @@ The way it works is that it will first find the movie title into the cache, if i
 ## Understanding Frontend Project
 
 This frontend project was built using the new Next.js 13
+
+### Env
+
+`.env.local` file here is optional, if it does not exists it will use the default values, the only variable currently used is `NEXT_PUBLIC_MOVIE_API_URL` to indicate the url for the backend
 
 ### Pages
 
